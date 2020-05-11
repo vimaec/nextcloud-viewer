@@ -32,6 +32,9 @@ export default class Viewer {
 		this.#state.file = ''
 		this.#state.files = []
 		this.#state.loadMore = () => ([])
+		this.#state.onPrev = () => {}
+		this.#state.onNext = () => {}
+		this.#state.onClose = () => {}
 		this.#state.handlers = []
 
 		// ! built-in handlers
@@ -90,7 +93,7 @@ export default class Viewer {
 	 * @param {string} path the path to open
 	 * @param {Object[]} [list] the list of files as objects (fileinfo) format
 	 */
-	open({ path, list = [], loadMore = () => ([]) } = {}) {
+	open({ path, list = [], loadMore = () => ([]), onPrev = () => {}, onNext = () => {}, onClose = () => {} }) {
 		// TODO: remove legacy method in NC 20 ?
 		if (typeof arguments[0] === 'string') {
 			path = arguments[0]
@@ -112,6 +115,9 @@ export default class Viewer {
 		this.#state.file = path
 		this.#state.files = list
 		this.#state.loadMore = loadMore
+		this.#state.onPrev = onPrev
+		this.#state.onNext = onNext
+		this.#state.onClose = onClose
 	}
 
 	/**
