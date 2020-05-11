@@ -115,6 +115,7 @@ import File from '../models/file'
 import Mime from '../mixins/Mime'
 import getFileList from '../services/FileList'
 import getFileInfo from '../services/FileInfo'
+import filesActionHandler from '../services/FilesActionHandler'
 
 import cancelableRequest from '../utils/CancelableRequest'
 
@@ -559,10 +560,7 @@ export default {
 					displayName: t('viewer', 'View'),
 					mime: mime,
 					permissions: OC.PERMISSION_READ,
-					actionHandler: (name, { dir }) => {
-						// replace potential leading double slashes
-						OCA.Viewer.open(`${dir}/${name}`.replace(/^\/\//, '/'))
-					},
+					actionHandler: filesActionHandler,
 				})
 				OCA.Files.fileActions.setDefault(mime, 'view')
 			}
