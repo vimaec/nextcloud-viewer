@@ -223,9 +223,9 @@ export default {
 			if (path.trim() !== '') {
 				console.info('Opening viewer for file ', path)
 				this.openFile(path)
-			} else if (this.initiated) {
-				// path is empty, closing!
-				this.close()
+			} else {
+				// path is empty, we're closing!
+				this.cleanup()
 			}
 		},
 
@@ -580,8 +580,13 @@ export default {
 		 * Close the viewer
 		 */
 		close() {
-			// reset all properties
+			// This will set file to ''
+			// which then triggers cleanup.
 			OCA.Viewer.close()
+		},
+
+		cleanup() {
+			// reset all properties
 			this.currentFile = {}
 			this.currentModal = null
 			this.fileList = []
