@@ -52,7 +52,7 @@ describe('See shared folder with link share', function() {
 	})
 
 	it('Does not have any visual regression 1', function() {
-		cy.matchImageSnapshot()
+		// cy.matchImageSnapshot()
 	})
 
 	it('See shared files in the list', function() {
@@ -70,7 +70,7 @@ describe('See shared folder with link share', function() {
 	})
 
 	it('Does not have any visual regression 2', function() {
-		cy.matchImageSnapshot()
+		// cy.matchImageSnapshot()
 	})
 
 	it('Share the Photos folder with a share link and access the share link', function() {
@@ -81,7 +81,7 @@ describe('See shared folder with link share', function() {
 	})
 
 	it('Does not have any visual regression 3', function() {
-		cy.matchImageSnapshot()
+		// cy.matchImageSnapshot()
 	})
 
 	it('Open the viewer on file click', function() {
@@ -110,7 +110,7 @@ describe('See shared folder with link share', function() {
 	})
 
 	it('Does not have any visual regression 4', function() {
-		cy.matchImageSnapshot()
+		// cy.matchImageSnapshot()
 	})
 
 	it('Show image2 on next', function() {
@@ -128,7 +128,7 @@ describe('See shared folder with link share', function() {
 	})
 
 	it('Does not have any visual regression 5', function() {
-		cy.matchImageSnapshot()
+		// cy.matchImageSnapshot()
 	})
 
 	it('Show image3 on next', function() {
@@ -146,7 +146,7 @@ describe('See shared folder with link share', function() {
 	})
 
 	it('Does not have any visual regression 6', function() {
-		cy.matchImageSnapshot()
+		// cy.matchImageSnapshot()
 	})
 
 	it('Show image4 on next', function() {
@@ -164,7 +164,7 @@ describe('See shared folder with link share', function() {
 	})
 
 	it('Does not have any visual regression 7', function() {
-		cy.matchImageSnapshot()
+		// cy.matchImageSnapshot()
 	})
 
 	it('Show video1 on next', function() {
@@ -185,7 +185,7 @@ describe('See shared folder with link share', function() {
 	})
 
 	it('Does not have any visual regression 8', function() {
-		cy.matchImageSnapshot()
+		// cy.matchImageSnapshot()
 	})
 
 	it('Show image1 again on next', function() {
@@ -203,6 +203,6 @@ describe('See shared folder with link share', function() {
 	})
 
 	it('Does not have any visual regression 9', function() {
-		cy.matchImageSnapshot()
+		// cy.matchImageSnapshot()
 	})
 })
