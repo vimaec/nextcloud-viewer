@@ -65,6 +65,7 @@
 import Vue from 'vue'
 import VuePlyr from '@skjnldsv/vue-plyr'
 import '@skjnldsv/vue-plyr/dist/vue-plyr.css'
+import { dirname } from '@nextcloud/paths'
 import { generateUrl } from '@nextcloud/router'
 import axios from '@nextcloud/axios'
 
@@ -136,9 +137,9 @@ export default {
 					generateUrl('/apps/viewer/video/tracks'),
 					{ params: { videoPath: this.filename } }
 				)
-				const davDir = this.davPath.replace(/[^/]*$/, '')
+				const davDir = dirname(this.davPath)
 				this.tracks = response.data.map(track => ({
-					davPath: davDir + track.basename,
+					davPath: davDir + '/' + track.basename,
 					language: track.language,
 					locale: track.locale,
 				}))
