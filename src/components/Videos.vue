@@ -134,7 +134,7 @@ export default {
 		async fetchTracks() {
 			try {
 				const response = await axios.get(
-					generateOcsUrl('/apps/viewer/video/v1.0/tracks'),
+					generateOcsUrl('/apps/viewer/video/tracks'),
 					{ params: { videoPath: this.filename } }
 				)
 				const davDir = dirname(this.davPath)
